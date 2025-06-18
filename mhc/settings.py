@@ -209,7 +209,9 @@ STATIC_URL = '/static/' # The URL prefix for your static files
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'uploader/static'),  # Path to your app's static files
 ]
-# Add this to tell Django where to find your project-level 'static' folder
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800  
+FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

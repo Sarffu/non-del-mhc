@@ -6,23 +6,21 @@
     <title>Provider File Updater</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'uploader/style.css' %}">
-
 </head>
 
 <body>
     <div class="container">
         <h1>Provider File Updater</h1>
 
-
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
-                <label for="scheduler">Scheduler File:</label>
-                <input type="file" name="Scheduler mhc" id="Scheduler mhc" required accept=".xlsx, .xls">
+                <label>Upload First File (Scheduler):</label>
+                <input type="file" name="file1" required accept=".xlsx,.xls,.csv">
             </div>
             <div class="form-group">
-                <label for="provider">Provider Roaster File:</label>
-                <input type="file" name="Roaster_mhc" id="Roaster_mhc" required accept=".xlsx, .xls">
+                <label>Upload Second File (Provider Roaster):</label>
+                <input type="file" name="file2" required accept=".xlsx,.xls,.csv">
             </div>
             <button type="submit">Process Files</button>
         </form>
